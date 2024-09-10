@@ -79,37 +79,42 @@ Column Description:
 
 ## 🧙‍♂️ Data Preparation
 1. To perform exploratory data analysis, I have combined all the above tables as 'final_raw_data'.
-2. To perform analysis at Product level, I have formed a new file 'Product_level_summary'.
+2. To perform analysis at Product level, I have formed a new table 'Product_level_summary'.
+3. To perform analysis at Product category level, I have formed a new table 'Product_level_summary'.
+4. I have created a new table 'visit_summary' that has 1 single row for every unique visit_id record.
 
 ## 🧙‍♂️ Case Study Questions
 <p align="center">
 <img src="https://media3.giphy.com/media/JQXKbzdLTQJJKP176X/giphy.gif" width=80% height=80%>
 
-### **A. High Level Sales Analysis**
+### **A. Digital Analysis**
 
-1. What was the total quantity sold for all products?
-2. What is the total generated revenue for all products before discounts?
-3. What was the total discount amount for all products?
+--Q1. How many users are there? 
+--Q2. How many cookies does each user have on average? 
+--Q3. What is the unique number of visits by all users per month?  
+--Q4. What is the number of events for each event type? 
+--Q5. What is the percentage of visits which have a purchase event? 
+--Q6. What is the percentage of visits which view the checkout page but do not have a purchase event?
+--Q7. What are the top 3 pages by number of views? 
+--Q8. What is the number of views and cart adds for each product category?  
 
+### ****B. Product Funnel Analysis****
 
-### **B. Transaction Analysis**
+--Q9. What are the top 3 products by purchases?
+--Q10.  Using prodct_level_summary and product_category_level_summary tables, 
+--Find which product had the most views, cart adds and purchases? 
+--Q11.  Using prodct_level_summary and product_category_level_summary tables, 
+--Find Which product was most likely to be abandoned? 
+--Q12.  Using prodct_level_summary and product_category_level_summary tables,
+--Find which product had the highest view to purchase percentage? 
+--Q13.  Using prodct_level_summary and product_category_level_summary tables,
+--Find what is the average conversion rate from view to cart add? (5 marks each for excel & sql)
+--Q14.  Using prodct_level_summary and product_category_level_summary tables,
+--Find What is the average conversion rate from cart add to purchase? (5 marks each for excel & sql)
 
-1. How many unique transactions were there?
-2. What is the average unique products purchased in each transaction?
-3. What are the 25th, 50th and 75th percentile values for the revenue per transaction?
-4. What is the average discount value per transaction?
-5. What is the percentage split of all transactions for members vs non-members?
-6. What is the average revenue for member transactions and non-member transactions?
+### ****B. Product Funnel Analysis****
 
-### **C. Product Analysis**
-
-1. What are the top 3 products by total revenue before discount?
-2. What is the total quantity, revenue and discount for each segment?
-3. What is the top selling product for each segment?
-4. What is the total quantity, revenue and discount for each category?
-5. What is the top selling product for each category?
-6. What is the percentage split of revenue by product for each segment?
-7. What is the percentage split of revenue by segment for each category?
-8. What is the percentage split of total revenue by category?
-9. What is the total transaction “penetration” for each product?
-10. What is the most common combination of at least 1 quantity of any 3 products in a 1 single transaction?
+--Q15.  Using visit_summary table, Identifying users who have received impressions during each campaign period and comparing each metric with other users who did not have an impression event. 
+--Q16.  Using visit_summary table, can we conclude that clicking on an impression lead to higher purchase rates?
+--Q17.  Using visit_summary table, What is the uplift in purchase rate when comparing users who click on a campaign impression versus users who do not receive an impression? What if we compare them with users who just an impression but do not click? 
+--Q18.  Using visit_summary table, What metrics can you use to quantify the success or failure of each campaign compared to each other?
